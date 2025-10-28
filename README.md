@@ -3,7 +3,7 @@
 i dont know what i should put here lol 
 ## info (read that)
 
-firstly, i don't recommend using this git btw, because i dont fu*king know how home manager works
+firstly, i don't recommend using this git btw, because maybe u dont understand how ts works
 
 ## Authors
 
