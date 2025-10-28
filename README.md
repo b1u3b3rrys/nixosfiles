@@ -7,6 +7,8 @@ i dont know what i should put here lol
 
 <i>im lazy to explain ts</i>
 
+<i>why i write that, it's kinda absurd</i>
+
 ## Authors
 
 - [b1u3rchie](https://github.com/b1u3b3rrys)
