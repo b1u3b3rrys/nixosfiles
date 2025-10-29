@@ -13,7 +13,7 @@
 	./ly.nix
 	./pipes.nix
 	./fonts.nix
-	,/shell.nix
+	./shell.nix
     ];
 
   # Bootloader.
