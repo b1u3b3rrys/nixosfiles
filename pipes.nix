@@ -11,9 +11,9 @@
     # If you want to use JACK applications, uncomment the following
     jack.enable = true;
   };
-  environment.systemPackages = [
-    pkgs.pamixer
-    pkgs.pwvucontrol
-    pkgs.playerctl	
+  environment.systemPackages = with pkgs; [
+    pamixer
+    pwvucontrol
+    playerctl	
   ];
 }
