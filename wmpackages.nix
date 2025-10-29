@@ -8,23 +8,23 @@ services.gvfs.enable = true;
 programs.niri = {
 	enable = true;
 };
-environment.systemPackages = [
-	pkgs.swaybg
-	pkgs.xwayland-satellite
-	pkgs.nemo
-	pkgs.kitty
-	pkgs.gnome-themes-extra
-	pkgs.papirus-icon-theme
-	pkgs.mako
-	pkgs.fuzzel
-	pkgs.git
-	pkgs.vim
-	pkgs.gedit
-	pkgs.fastfetch
-	pkgs.xdg-desktop-portal-gtk
-	pkgs.wl-clipboard
-	pkgs.nwg-look
-	pkgs.waybar	
+environment.systemPackages = with pkgs; [
+	swaybg
+	xwayland-satellite
+	nemo
+	kitty
+	gnome-themes-extra
+	papirus-icon-theme
+	mako
+	fuzzel
+	git
+	vim
+	gedit
+	fastfetch
+	xdg-desktop-portal-gtk
+	wl-clipboard
+	nwg-look
+	waybar	
 ];
 
 
