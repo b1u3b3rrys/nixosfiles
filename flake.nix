@@ -1,0 +1,20 @@
+{
+  description = "chaotic-repo";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # IMPORTANT
+  };
+
+  outputs = { nixpkgs, chaotic, ... }: {
+    nixosConfigurations = {
+      nixOS = nixpkgs.lib.nixosSystem { # Replace "nixOS" with your system's hostname 
+        system = "x86_64-linux";
+        modules = [
+          ./configuration.nix
+          chaotic.nixosModules.default # IMPORTANT
+        ];
+      };
+    };
+  };
+}
