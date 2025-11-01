@@ -9,6 +9,12 @@ i dont know what i should put here lol
 
 <i>why i write that, it's kinda absurd</i>
 
+
+## What new? 
+added flake.nix and flake.lock  [01.11.2025] 
+
+
+
 ## Authors
 
 - [b1u3rchie](https://github.com/b1u3b3rrys)
