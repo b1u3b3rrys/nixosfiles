@@ -52,8 +52,9 @@ layout {
     default-column-width { proportion 0.5; }
     focus-ring {
         width 2
-        active-color "#eb6f92"
-        inactive-color "#eb6f92"
+        active-color "#cdd6f4"
+        inactive-color "#cdd6f4"
+        urgent-color "#cdd6f4"
     }
     border {
         off
@@ -74,23 +75,20 @@ gestures {
         off
     }
 }
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 14
 
+    hide-when-typing
+    hide-after-inactive-ms 5000
+}
 // startup processes
-spawn-sh-at-startup "udiskie"
-spawn-sh-at-startup "niriswitcher"
-spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-spawn-sh-at-startup "wl-paste --watch cliphist store"
+spawn-sh-at-startup "wl-clipboard"
 spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "mako"
-spawn-sh-at-startup "pkill swayidle; echo '10 minutes' > /tmp/idle-time; $NIRICONF/scripts/swayidle.sh"
 
 // workspace background and backdrop
-spawn-sh-at-startup "swww-daemon & swww img $NIRICONF/wallpapers/backdrop.png"
-spawn-sh-at-startup "swaybg -i /home/b1u3rchie/.config/niri/73.jpg"
-layer-rule {
-    match namespace="^swww-daemon$"
-    place-within-backdrop true
-}
+spawn-sh-at-startup "swaybg -i /home/b1u3rchie/.config/niri/76.jpg"
 
 // Animation settings.
 // The wiki explains how to configure individual animations:
@@ -106,7 +104,8 @@ window-rule {
 }
 window-rule {
     match app-id="com.saivert.pwvucontrol"
-    match app-id="steam"
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
     open-floating true
     shadow {
         off
@@ -119,10 +118,7 @@ binds {
     Mod+D           {spawn-sh "fuzzel"; }
     Mod+B           { spawn-sh "firefox"; }
     Mod+E           { spawn-sh "nemo" ; }
-    Mod+L           { spawn-sh "$NIRICONF/scripts/swaylock.sh"; }
     Mod+C           { spawn-sh "cliphist list | fuzzel --dmenu --config $NIRICONF/fuzzel/clipboard.ini | cliphist decode | wl-copy"; }
-    Mod+W           { spawn-sh "$NIRICONF/scripts/toggle-waybar.sh"; }
-    Mod+Backspace   { spawn-sh "$NIRICONF/scripts/wlogout.sh"; }
 
     // Backlight and Audio
     XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "brightnessctl set +5%" ; }
@@ -160,7 +156,6 @@ binds {
     Mod+BracketRight     { consume-or-expel-window-right; }
     Mod+Comma            { consume-window-into-column; }
     Mod+Period           { expel-window-from-column; }
-    Alt+Tab repeat=false { spawn-sh "pkill -USR1 niriswitcher"; }
 
     // Workspaces
     Mod+Page_Down      { focus-workspace-down; }
