@@ -88,7 +88,7 @@ spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "mako"
 
 // workspace background and backdrop
-spawn-sh-at-startup "swaybg -i /home/b1u3rchie/.config/niri/76.jpg"
+spawn-sh-at-startup "swaybg -i /home/b1u3rchie/.config/niri/74.jpg"
 
 // Animation settings.
 // The wiki explains how to configure individual animations:
