@@ -17,7 +17,7 @@
         "clock"
     ],
     "modules-right": [
-        // "custom/vkeyboard",
+        "network",
         "pulseaudio",
         "tray",
     ],
