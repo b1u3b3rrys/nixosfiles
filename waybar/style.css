@@ -2,7 +2,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "JetBrainsMono Nerd Font";
     font-size: 14px;
-    color: #ebbcba;
+    color: #cdd6f4;
 }
 
 window#waybar {
@@ -188,12 +188,14 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: #1e1e2e;;
+    color: #cdd6f4;;
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: #1e1e2e;
+    border-radius: 15px;
+    padding: 0 10px 0 5px;
 }
 
 #disk {
@@ -258,5 +260,3 @@ label:focus {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
 }
-
-
