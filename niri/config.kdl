@@ -35,7 +35,7 @@ output "DP-1" {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
-    gaps 14
+    gaps 10
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
@@ -51,13 +51,12 @@ layout {
     }
     default-column-width { proportion 0.5; }
     focus-ring {
-        width 2
-        active-color "#cdd6f4"
-        inactive-color "#cdd6f4"
-        urgent-color "#cdd6f4"
+        off
     }
     border {
-        off
+     width 2
+         active-color "#cdd6f4"
+        inactive-color "#cdd6f4"
     }
     struts {
         left 0
@@ -88,7 +87,7 @@ spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "mako"
 
 // workspace background and backdrop
-spawn-sh-at-startup "swaybg -i /home/b1u3rchie/.config/niri/74.jpg"
+spawn-sh-at-startup "swaybg -i /home/b1u3rchie/.config/niri/75.jpg"
 
 // Animation settings.
 // The wiki explains how to configure individual animations:
