@@ -11,14 +11,13 @@ programs.niri = {
 environment.systemPackages = with pkgs; [
 	swaybg
 	xwayland-satellite
-	nemo
+	xfce.thunar
 	kitty
 	gnome-themes-extra
 	papirus-icon-theme
 	mako
 	fuzzel
 	git
-	vim
 	gedit
 	fastfetch
 	xdg-desktop-portal-gtk
