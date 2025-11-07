@@ -55,8 +55,9 @@ layout {
     }
     border {
      width 2
-         active-color "#cdd6f4"
-        inactive-color "#cdd6f4"
+         active-color "#ebbcba"
+        inactive-color "#c4a7e7"
+        urgent-color "#eb6f92"
     }
     struts {
         left 0
@@ -116,7 +117,7 @@ binds {
     Mod+T      { spawn-sh "kitty"; }
     Mod+D           {spawn-sh "fuzzel"; }
     Mod+B           { spawn-sh "firefox"; }
-    Mod+E           { spawn-sh "thunar" ; }
+    Mod+E           { spawn-sh "nemo" ; }
     Mod+C           { spawn-sh "cliphist list | fuzzel --dmenu --config $NIRICONF/fuzzel/clipboard.ini | cliphist decode | wl-copy"; }
 
     // Backlight and Audio
