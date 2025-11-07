@@ -1,7 +1,5 @@
 {config, pkgs, ... }:
 {
-
-
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true; # if not already enabled
