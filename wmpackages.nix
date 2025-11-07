@@ -23,6 +23,7 @@ environment.systemPackages = with pkgs; [
 	xdg-desktop-portal-gtk
 	wl-clipboard
 	nwg-look
+	kdePackages.breeze-gtk
 	waybar	
 ];
 
