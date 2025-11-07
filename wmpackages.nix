@@ -11,7 +11,7 @@ programs.niri = {
 environment.systemPackages = with pkgs; [
 	swaybg
 	xwayland-satellite
-	xfce.thunar
+	nemo
 	kitty
 	gnome-themes-extra
 	papirus-icon-theme
@@ -23,7 +23,6 @@ environment.systemPackages = with pkgs; [
 	xdg-desktop-portal-gtk
 	wl-clipboard
 	nwg-look
-	kdePackages.breeze-gtk
 	waybar	
 ];
 
