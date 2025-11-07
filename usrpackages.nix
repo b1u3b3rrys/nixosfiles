@@ -2,10 +2,11 @@
 {
 programs.steam.enable = true;
 environment.systemPackages = with pkgs; [
-	telegram-desktop
+	ayugram-desktop
 	firefox
 	cmatrix
 	prismlauncher
-	discord	
+	vesktop
+	cava
 ];
 }
