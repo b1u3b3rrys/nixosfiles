@@ -1,4 +1,4 @@
-# My nixos configuration
+# My NixOS configuration
 
 ## info (read that)
 
