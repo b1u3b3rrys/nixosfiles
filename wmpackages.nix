@@ -10,21 +10,22 @@ programs.niri = {
 };
 environment.systemPackages = with pkgs; [
 	swaybg
+	papirus-icon-theme
+	git
 	xwayland-satellite
 	nemo
-	kitty
-	gnome-themes-extra
-	papirus-icon-theme
+	alacritty
+	gnome-themes-extra        	
+	graphite-cursors			
 	mako
 	fuzzel
-	git
 	gedit
-	fastfetch
-	xdg-desktop-portal-gtk
+	hyfetch
+	xdg-desktop-portal-wlr
 	wl-clipboard
 	nwg-look
-	waybar	
+	waybar
+	htop	
 ];
-
 
 }
