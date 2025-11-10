@@ -1,6 +1,5 @@
-# my nixos configuration
+# My nixos configuration
 
-i dont know what i should put here lol 
 ## info (read that)
 
 **firstly, i don't recommend using this git**
