@@ -25,6 +25,7 @@ environment.systemPackages = with pkgs; [
 	wl-clipboard
 	nwg-look
 	waybar
+	fastfetch
 	htop	
 ];
 
