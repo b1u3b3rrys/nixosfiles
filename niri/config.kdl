@@ -76,7 +76,7 @@ gestures {
     }
 }
 cursor {
-    xcursor-theme "Adwaita"
+    xcursor-theme "graphite-dark"
     xcursor-size 14
 
     hide-when-typing
@@ -114,7 +114,7 @@ window-rule {
 
 binds {
     // Applications
-    Mod+T      { spawn-sh "kitty"; }
+    Mod+T      { spawn-sh "alacritty"; }
     Mod+D           {spawn-sh "fuzzel"; }
     Mod+B           { spawn-sh "firefox"; }
     Mod+E           { spawn-sh "nemo" ; }
