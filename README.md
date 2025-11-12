@@ -10,5 +10,9 @@
 
 - [b1u3rchie](https://github.com/b1u3b3rrys)
 
+## Other info (read that)
+
+**this repository no longer supported**
+
 
 
