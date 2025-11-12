@@ -2,7 +2,7 @@
 
 ## info (read that)
 
-**firstly, i don't recommend using this git**
+**firstly, i don't recommend using this github repo**
 
 **I created this repository purely for myself**
 
