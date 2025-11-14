@@ -12,6 +12,7 @@ environment.systemPackages = with pkgs; [
 	swaybg
 	papirus-icon-theme
 	git
+	fastfetch #for the hyfetch backend
 	xwayland-satellite
 	nemo
 	alacritty
