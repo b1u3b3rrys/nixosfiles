@@ -82,6 +82,9 @@ cursor {
     hide-when-typing
     hide-after-inactive-ms 5000
 }
+overview {
+    backdrop-color "#191724"
+}
 // startup processes
 spawn-sh-at-startup "wl-clipboard"
 spawn-sh-at-startup "waybar"
@@ -93,7 +96,7 @@ spawn-sh-at-startup "swaybg -i /home/b1u3rchie/.config/niri/75.jpg"
 // Animation settings.
 // The wiki explains how to configure individual animations:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
-animations {}
+
 
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
