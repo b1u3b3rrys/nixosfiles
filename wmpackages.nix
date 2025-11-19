@@ -4,7 +4,7 @@
 
 programs.xwayland.enable = true;
 services.gvfs.enable = true;
-
+services.displayManager.ly.enable = true;
 programs.niri = {
 	enable = true;
 };
