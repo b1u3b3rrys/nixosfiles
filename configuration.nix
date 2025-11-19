@@ -10,7 +10,7 @@
 	./nvidia.nix
 	./wmpackages.nix
 	./usrpackages.nix
-	./ly.nix
+	./misc.nix
 	./pipes.nix
 	./fonts.nix
 	./shell.nix
