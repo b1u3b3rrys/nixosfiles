@@ -121,7 +121,6 @@ binds {
     Mod+D           {spawn-sh "fuzzel"; }
     Mod+B           { spawn-sh "firefox"; }
     Mod+E           { spawn-sh "nemo" ; }
-    Mod+C           { spawn-sh "cliphist list | fuzzel --dmenu --config $NIRICONF/fuzzel/clipboard.ini | cliphist decode | wl-copy"; }
 
     // Backlight and Audio
     XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "brightnessctl set +5%" ; }
