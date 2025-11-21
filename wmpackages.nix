@@ -1,10 +1,24 @@
-{pkgs,lib,config, ...}:
 
+{pkgs,lib,config, ...}:
 {
 
 programs.xwayland.enable = true;
 services.gvfs.enable = true;
 services.displayManager.ly.enable = true;
+xdg.portal.wlr.enable = true;
+
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      default = [
+        "alacritty.desktop"
+      ];
+    };
+  };
+
+
+
+ 
 programs.niri = {
 	enable = true;
 };
@@ -12,21 +26,18 @@ environment.systemPackages = with pkgs; [
 	swaybg
 	papirus-icon-theme
 	git
-	fastfetch #for the hyfetch backend
+	gnome-themes-extra
 	xwayland-satellite
 	nemo
-	alacritty
-	gnome-themes-extra        	
+	alacritty        	
 	graphite-cursors			
 	mako
 	fuzzel
-	gedit
+	fastfetch
 	hyfetch
-	xdg-desktop-portal-wlr
 	wl-clipboard
 	nwg-look
 	waybar
-	fastfetch
 	htop	
 ];
 
