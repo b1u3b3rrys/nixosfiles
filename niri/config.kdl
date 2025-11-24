@@ -54,10 +54,10 @@ layout {
         off
     }
     border {
-     width 2
-         active-color "#ebbcba"
-        inactive-color "#c4a7e7"
-        urgent-color "#eb6f92"
+     width 2.5
+        active-gradient from="#eb6f92" to="#ebbcba" angle=0
+        inactive-gradient from="#31748f" to="#9ccfd8" angle=0
+        urgent-color "#c4a7e7"
     }
     struts {
         left 0
