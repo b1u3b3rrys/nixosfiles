@@ -2,7 +2,7 @@
 {
 programs.steam.enable = true;
 environment.systemPackages = with pkgs; [
-	ayugram-desktop
+	telegram-desktop
 	firefox
 	cmatrix
 	prismlauncher
