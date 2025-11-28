@@ -102,7 +102,7 @@ spawn-sh-at-startup "swaybg -i /home/b1u3rchie/.config/niri/75.jpg"
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 window-rule {
-    geometry-corner-radius 10
+    geometry-corner-radius 6
     clip-to-geometry true
 }
 window-rule {
