@@ -15,12 +15,11 @@ xdg.portal.wlr.enable = true;
       ];
     };
   };
-
-
-
  
 programs.niri = {
 	enable = true;
+	useNautilus = false;
+#idk why they pack niri with nautilus
 };
 environment.systemPackages = with pkgs; [
 	swaybg
