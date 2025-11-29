@@ -8,9 +8,14 @@
 hardware.nvidia = {
 
 	modesetting.enable = true;
+
 	powerManagement.enable = false;
+
 	powerManagement.finegrained = false;
+
 	open = true;
-	package = config.boot.kernelPackages.nvidiaPackages.latest;
+
+	package = config.boot.kernelPackages.nvidiaPackages.beta;
+
    };
 }
