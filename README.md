@@ -9,7 +9,8 @@
 
 ## how its looks like 
 
-<img width="3440" height="1440" alt="image_2025-11-23_20-04-59" src="https://github.com/user-attachments/assets/8078a487-ed66-4e11-b507-2c0ce356972f" />
+<img width="3440" height="1440" alt="image_2025-12-05_21-08-01" src="https://github.com/user-attachments/assets/794af79c-753a-4a0d-b89f-c82949ba66d4" />
+
 
 ### Instalation?
 ```
