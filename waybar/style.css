@@ -1,196 +1,74 @@
-* {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 14px;
-    color: #ebbcba;
-}
-
 window#waybar {
-    /*background-color: rgba(0, 0, 0, 1);*/
-    background-color: #191724;
-    background-color: transparent;
-    color: #ebbcba;
-    /*border: 1px solid rgba(211, 187, 255, 0.5);*/
-    /*border-radius: 10;*/
+	background-color: rgba(25, 23, 36, 0.75);
+	color: #cdd6f4;
+	transition-property: background-color;
+	transition-duration: .5s;
+	border-bottom: 1px solid rgba(144, 140, 170, 0.35);
 }
 
-
-#workspaces {
-    /* margin: 4px 0px 4px 0px; */
-    background-color: #191724;
-    border-radius: 15px;
-    padding: 0 10px 0 5px;
+* {
+	font-family: "JetBrains Mono Nerd Font";
+	font-size: 10pt;
 }
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-@keyframes blink {
-    to {
-        color: #f53c3c;
-    }
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-
 
 #workspaces button {
-    margin: 0 0px;
-    padding: 0 0px;
-    background-color: transparent;
-    min-width: 20px;
-}
-
-#workspaces button:hover {
-    /* background: rgba(38, 51, 85, 0.5); */
-    background: transparent;
-}
-
-#workspaces button.active {
-    font-weight: bold;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: transparent;
+	border-radius: 100%;
+	border: 6px #f5c2e7;
+	font-weight: 800;
+	color: #a6adc8; 
 }
 
 #workspaces button.urgent {
-    color: #eb4d4b;
+	color: #fab387;
 }
 
-button:hover {
-    /* background: rgba(38, 51, 85, 0.5); */
-    background: transparent;
+#workspaces button:hover {
+	background: rgba(69, 71, 90, 0.65);
+	color: #cdd6f4;
+	border: 12px #f5c2e7;
+	transition: none;
 }
 
- button.active {
-    font-weight: bold;
+#workspaces button.focused {
+	color: #f5c2e7;
+	border: 12px #f5c2e7;
 }
 
-button.urgent {
-    color: #eb4d4b;
+label.module {
+	padding: 0 10px 0 10px;
 }
 
-
-/* #taskbar { */
-/*     margin: 2px 0px 2px 0px; */
-/*     background-color: #313244; */
-/*     border-radius: 15px; */
-/*     padding: 0 7px; */
-/*     color: #89b4fa; */
-/* } */
-
-#tray,
-#taskbar,
-#idle_inhibitor,
-#mpris,
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#privacy,
-#custom-media,
-#mode,
-#scratchpad,
-#mpd {
-    /* margin: 4px 0px 4px 0px; */
-    background-color: #191724;
-    border-radius: 15px;
-    padding: 0 10px 0 10px;
+box.module button:hover {
+	box-shadow: none;
+	outline: none;
+	font-style: normal;
+	text-shadow: none;
 }
 
-
-#window,
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
+#tray {
+	padding: 0 8 0 8;
 }
 
-/* #taskbar { */
-/*     border: 1px solid #ffffff; */
-/* } */
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
+menu {
+	background-color: #181825;
+	color: #cdd6f4;
+	border: 1px solid #494d64;
+	padding: 6px;
+	border-radius: 12px;
 }
 
-
-
-
-
-
-#cpu {
-    background-color: #191724;;
-    color: #ebbcba;;
+#tray menu menuitem:hover {
+	background-color: #1e1e2e;
+	color: #f5c2e7;
+	border-radius: 5px;
 }
 
-#memory {
-    background-color: #191724;
-    border-radius: 15px;
-    padding: 0 10px 0 5px;
-}
-
-#disk {
-    background-color: #964b00;
-}
-
-#network {
-    padding: 7px;
-}
-
-#network.disconnected {
-    color: #eb4d4b;
-}
-
-#pulseaudio.muted {
-    color: #eb4d4b;
-}
-
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
-}
-
-#wireplumber.muted {
-    background-color: #f53c3c;
-}
-#custom-launcher {
-    /* margin: 4px 0px 4px 5px; */
-    background-color: #191724;
-    border-radius: 15px;
-    padding: 0 8px 0 11px;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
-
-
-#tray>.passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray>.needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+#window {
+	font-weight: 800;
+	padding: 0px 8px 0px 8px;
 }
