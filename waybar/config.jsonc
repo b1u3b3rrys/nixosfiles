@@ -1,15 +1,14 @@
 {
     "layer": "top",
+     "margin-top": 2,
     "modules-left": [ "niri/workspaces", "mpris"],
     "modules-center": ["clock"],
-    "modules-right": [ "tray", "cpu", "memory", "pulseaudio"],
-    "sway/scratchpad": {
-      "format": "󱂬 {count}"
-    },
+    "modules-right": [ "tray", "cpu", "memory", "network", "pulseaudio"],
     "pulseaudio": {
     	"format": "  {volume}%",
-		"on-click": "swayosd-client --output-volume mute-toggle",
-		"on-click-right": "flatpak run com.saivert.pwvucontrol"
+		"on-click": "pamixer --toggle-mute",
+		"on-click-right": "pwvucontrol",
+		"format-muted": " {volume}%"
     },
     "niri/workspaces": {
       "format": "{index}"
@@ -24,18 +23,12 @@
     	"interval": "0.1"
     },
     "clock": {
-        "format": "{:%d %b %H:%M}",
+        "format": "󰥔 {:%d %b %H:%M}",
         "interval": 1,
         "tooltip-format": "{:%A %d %B %Y}"
     },
     "tray": {
     	"spacing": 12
-    },
-    "gamemode": {
-        "glyph": "   ",
-        "format": "{glyph}",
-        "use-icon": false,
-        "icon-spacing": 16
     },
     "memory": {
         "format": "  {percentage}%",
@@ -45,6 +38,15 @@
         "format": "  {usage}%",
         "interval": 1
     },
+     "network": {
+        "format-wifi": " ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "    {essid}({signalStrength}%)",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "⚠",
+        "on-click": "alacritty -e nmtui"
+     },
+        
     "battery": {
     	"format": "{icon} {capacity}%",
     	"format-charging": "{icon} {capacity}% ",
