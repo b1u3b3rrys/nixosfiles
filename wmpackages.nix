@@ -1,11 +1,9 @@
-
-{pkgs,lib,config, ...}:
+{pkgs ,lib,config, ...}:
 {
-
+xdg.icons.fallbackCursorThemes = [ "BreezeX-RosePine-Linux" ];
 programs.xwayland.enable = true;
 services.gvfs.enable = true;
 services.displayManager.ly.enable = true;
-xdg.portal.wlr.enable = true;
 
   xdg.terminal-exec = {
     enable = true;
@@ -15,21 +13,21 @@ xdg.portal.wlr.enable = true;
       ];
     };
   };
- 
 programs.niri = {
 	enable = true;
-	useNautilus = false;
-#idk why they pack niri with nautilus
+	useNautilus = true;
 };
 environment.systemPackages = with pkgs; [
 	swaybg
+	xdg-desktop-portal-gtk
 	papirus-icon-theme
 	git
+	nautilus
+	home-manager
 	gnome-themes-extra
 	xwayland-satellite
-	nemo
 	alacritty        	
-	graphite-cursors			
+	rose-pine-cursor			
 	mako
 	fuzzel
 	fastfetch
