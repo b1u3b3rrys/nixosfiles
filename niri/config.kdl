@@ -19,6 +19,10 @@ input {
     }
     focus-follows-mouse
 }
+environment {
+QT_QPA_PLATFORM "wayland"
+QT_QPA_PLATFORMTHEME  "gtk3"
+}
 
 // Monitor configuration.
 // Find more information on the wiki:
@@ -76,8 +80,8 @@ gestures {
     }
 }
 cursor {
-    xcursor-theme "graphite-dark"
-    xcursor-size 14
+    xcursor-theme "BreezeX-RosePine-Linux"
+    xcursor-size 24
 
     hide-when-typing
     hide-after-inactive-ms 5000
@@ -91,7 +95,7 @@ spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "mako"
 
 // workspace background and backdrop
-spawn-sh-at-startup "swaybg -i /home/b1u3rchie/.config/niri/75.jpg"
+spawn-sh-at-startup "swaybg -i /home/b1u3rchie/.config/niri/75.png"
 
 // Animation settings.
 // The wiki explains how to configure individual animations:
@@ -120,7 +124,7 @@ binds {
     Mod+T      { spawn-sh "alacritty"; }
     Mod+D           {spawn-sh "fuzzel"; }
     Mod+B           { spawn-sh "firefox"; }
-    Mod+E           { spawn-sh "nemo" ; }
+    Mod+E           { spawn-sh "nautilus" ; }
 
     // Backlight and Audio
     XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "brightnessctl set +5%" ; }
