@@ -2,7 +2,6 @@
 # your system.
 
 { config, pkgs, ... }:
-
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -21,18 +20,20 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "nixOS"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+home-manager = {
+	backupFileExtension = "hm-backup";
+};
+
 
   # Enable networking
   networking.networkmanager.enable = true;
-
+    home-manager.users.b1u3rchie = {
+      imports = [ ./home.nix ];
+    };
   # Set your time zone.
   time.timeZone = "Europe/Bratislava";
 
@@ -53,7 +54,7 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
+    layout = "us,ru";
     variant = "";
   };
 
@@ -68,8 +69,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   #experemental features
-  nix.settings.experimental-features = [ "nix-command", "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  system.stateVersion = "25.05"; # Did you read the comment?
-
+  system.stateVersion = "26.05"; # Did you read the comment?
+ 
 }
