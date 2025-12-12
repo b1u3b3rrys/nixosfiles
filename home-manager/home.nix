@@ -1,5 +1,5 @@
-{ config, pkgs, ... }:
 {
+
 #imports = [
   #./niri.nix
 #];
@@ -26,9 +26,13 @@
   
   gtk = {
     enable = true;
+    iconTheme = {
+          name = "Papirus-Dark";
+          package = pkgs.papirus-icon-theme;
+     };
     theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
+      name = "adw-gtk";
+      package =  pkgs.adw-gtk3;
     };
    gtk4 = {
      extraConfig = {
@@ -54,5 +58,8 @@
     XCURSOR_THEME = "BreezeX-RosePine-Linux";
     XCURSOR_SIZE = "24";
     QT_QPA_PLATFORMTHEME = "gtk3";
+     QT_QPA_PLATFORM = "wayland";
+    SDL_VIDEODRIVER = "wayland";
+    XDG_SESSION_TYPE = "wayland";
   };
 }
