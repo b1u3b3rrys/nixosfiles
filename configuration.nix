@@ -22,7 +22,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixOS"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
 
 home-manager = {
 	backupFileExtension = "hm-backup";
@@ -31,9 +31,6 @@ home-manager = {
 
   # Enable networking
   networking.networkmanager.enable = true;
-    home-manager.users.b1u3rchie = {
-      imports = [ ./home.nix ];
-    };
   # Set your time zone.
   time.timeZone = "Europe/Bratislava";
 
