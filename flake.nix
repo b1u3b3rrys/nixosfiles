@@ -18,7 +18,7 @@ home-manager = {
           ./configuration.nix
           home-manager.nixosModules.home-manager
           {
-             home-manager.users.b1u3rchie = import ./home/home.nix;
+             home-manager.users.b1u3rchie = import ./home-manager/home.nix;
            }  
         ];
       };
