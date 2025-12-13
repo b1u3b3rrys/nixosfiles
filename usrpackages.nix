@@ -3,7 +3,7 @@
 programs.steam.enable = true;
 environment.systemPackages = with pkgs; [
 	telegram-desktop
-	firefox
+	librewolf
 	cmatrix
 	prismlauncher
 	vesktop
