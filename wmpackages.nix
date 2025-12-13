@@ -4,7 +4,10 @@ xdg.icons.fallbackCursorThemes = [ "BreezeX-RosePine-Linux" ];
 programs.xwayland.enable = true;
 services.gvfs.enable = true;
 services.displayManager.ly.enable = true;
-
+xdg.portal = {
+	enable = true;
+	wlr.enable = true;
+};
   xdg.terminal-exec = {
     enable = true;
     settings = {
@@ -19,7 +22,6 @@ programs.niri = {
 };
 environment.systemPackages = with pkgs; [
 	swaybg
-	xdg-desktop-portal-gtk
 	papirus-icon-theme
 	git
 	nautilus
