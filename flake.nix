@@ -12,11 +12,14 @@ home-manager = {
 
   outputs = { nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
-      nixOS = nixpkgs.lib.nixosSystem { # Replace "nixOS" with your system's hostname 
+      nixos = nixpkgs.lib.nixosSystem { # Replace "nixOS" with your system's hostname 
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
+          {
+             home-manager.users.b1u3rchie = import ./home/home.nix;
+           }  
         ];
       };
     };
