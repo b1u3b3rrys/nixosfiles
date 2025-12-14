@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SELECTION="$(printf "1 - Reboot\n2 - Shutdown" | fuzzel --dmenu -l 7 -p "Goodbye?: ")"
+SELECTION="$(printf "1 - Reboot\n2 - Shutdown" | fuzzel --dmenu -l 7 -p "power menu: ")"
 
 [ -z "$SELECTION" ] && exit 0
 
