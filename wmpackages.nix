@@ -22,7 +22,6 @@ programs.niri = {
 };
 environment.systemPackages = with pkgs; [
 	swaybg
-	papirus-icon-theme
 	git
 	nautilus
 	home-manager
