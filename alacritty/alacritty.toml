@@ -1,8 +1,6 @@
-general.import = [
-  "~/.config/alacritty/rose-pine.toml"
-]
+
 [font.normal]
-family = "JetBrains Mono Nerd font"
+family = "Iosevka Nerd Font"
 style = "Regular"
 
 [window]
