@@ -14,7 +14,7 @@
 
 ### Instalation?
 ```
- git clone https://github.com/b1u3b3rrys/nixosfiles
+ git clone https://github.com/b1u3b3rrys/Nixberry
 ```
 and put files into ~/.config and /etc/nixos
 
