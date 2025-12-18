@@ -28,7 +28,6 @@ environment.systemPackages = with pkgs; [
 	gnome-themes-extra
 	xwayland-satellite
 	alacritty        	
-	rose-pine-cursor			
 	mako
 	fuzzel
 	fastfetch
