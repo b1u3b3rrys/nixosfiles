@@ -23,6 +23,7 @@ programs.niri = {
 };
 environment.systemPackages = with pkgs; [
 	swaybg
+  micro
 	git
 	nautilus
 	home-manager
