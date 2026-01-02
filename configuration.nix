@@ -21,14 +21,22 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  networking.hostName = "nixos"; # Define your hostname.
-
+	services.xserver.videoDrivers = ["nvidia"];
+	hardware.graphics = {
+	enable = true;
+	};
+#nvidia hardware settings
+hardware.nvidia = {
+	modesetting.enable = true;
+	powerManagement.enable = false;
+	powerManagement.finegrained = false;
+	open = true;
+	package = config.boot.kernelPackages.nvidiaPackages.beta;
+   };
+networking.hostName = "nixos"; # Define your hostname.
 home-manager = {
 	backupFileExtension = "hm-backup";
 };
-
-
   # Enable networking
   networking.networkmanager.enable = true;
   # Set your time zone.
