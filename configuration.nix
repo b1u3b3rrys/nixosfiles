@@ -3,14 +3,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-	./wmpackages.nix
-	./usrpackages.nix
+	./desktop/wmpkgs.nix
+	./desktop/usrpkgs.nix
   ./hardware-and-other-things/networking-and-users.nix
   ./hardware-and-other-things/additional-hardware.nix
-	./misc.nix
-	./pipes.nix
-	./fonts.nix
-	./shell.nix
     ];
 
   # Allow unfree packages
