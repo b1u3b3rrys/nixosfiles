@@ -6,6 +6,7 @@
 	./wmpackages.nix
 	./usrpackages.nix
   ./hardware-and-other-things/
+  ./hardware-and-other-things/additional-hardware.nix
 	./misc.nix
 	./pipes.nix
 	./fonts.nix
