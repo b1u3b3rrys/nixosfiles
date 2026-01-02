@@ -33,10 +33,10 @@
   # Desktop Environment and Portal Configuration 
   xdg.portal = {
     enable = true;
-    wlr.enable = true;  # Wayland support for portals
+    wlr.enable = true; 
   };
 
-  # Cursor Themes (steam with xwayland hate these 
+  # Cursor Themes (steam with xwayland hate these cursors btw)
   xdg.icons.fallbackCursorThemes = [ "BreezeX-RosePine-Linux" ];
 
   # Terminal Settings 
