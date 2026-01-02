@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 {
+imports = [
+   ./links.nix
+];
 environment.variables = {
    		EDITOR = "micro";
    };
