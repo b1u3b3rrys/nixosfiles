@@ -1,1 +1,56 @@
-.
+{
+    "layer": "top",
+     "margin-top": 2,
+    "modules-left": [ "niri/workspaces", "mpris"],
+    "modules-center": ["clock"],
+    "modules-right": [ "tray", "cpu", "memory", "network", "pulseaudio"],
+    "pulseaudio": {
+    	"format": "  {volume}%",
+		"on-click": "pamixer --toggle-mute",
+		"on-click-right": "pwvucontrol",
+		"format-muted": " {volume}%"
+    },
+    "niri/workspaces": {
+      "format": "{index}"
+    },
+    "mpris": {
+    	"format": "{status_icon} {artist} - {title}",
+    	"format-stopped": "",
+    	"status-icons": {
+    		"playing": "",
+    		"paused": "󰐊"
+    	},
+    	"interval": "0.1"
+    },
+    "clock": {
+        "format": "󰥔 {:%d %b %H:%M}",
+        "interval": 1,
+        "tooltip-format": "{:%A %d %B %Y}"
+    },
+    "tray": {
+    	"spacing": 12
+    },
+    "memory": {
+        "format": "  {percentage}%",
+        "interval": 1
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 1
+    },
+     "network": {
+        "format-wifi": " ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "    {essid}({signalStrength}%)",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "⚠",
+        "on-click": "alacritty -e nmtui"
+     },
+        
+    "battery": {
+    	"format": "{icon} {capacity}%",
+    	"format-charging": "{icon} {capacity}% ",
+    	"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    	"interval": 1
+    }
+}
