@@ -19,9 +19,9 @@
 
   # Additional Pipewire packages for control and management
   environment.systemPackages = with pkgs; [
-    pamixer          
-    pwvucontrol      
-    playerctl        
+   pw-volume       
+   wiremix    
+   playerctl        
   ];
 
   # NVIDIA Driver Settings
