@@ -1,40 +1,40 @@
 { config, ... }:
+
 {
-#linux kernel:
-boot.kernelPackages = pkgs.linuxPackages_latest;
-#bootloader settings:
-boot.loader.systemd-boot.enable = true;
-boot.loader.efi.canTouchEfiVariables = true;
-#pipewire:
-security.rtkit.enable = true;
+  # Linux Kernel Configuration 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # Bootloader Settings 
+  boot.loader.systemd-boot.enable = true;  # Enable systemd-boot as the bootloader
+  boot.loader.efi.canTouchEfiVariables = true;  # Allow system to modify EFI variables
+
+  # Pipewire Configuration 
   services.pipewire = {
-    enable = true; # if not already enabled
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
+    enable = true;  
+    alsa.enable = true;  
+    alsa.support32Bit = true;  
+    pulse.enable = true;  
+    jack.enable = true; 
   };
-# additional pkgs for pipewire:
+
+  # Additional Pipewire packages for control and management
   environment.systemPackages = with pkgs; [
-    pamixer
-    pwvucontrol
-    playerctl	
+    pamixer          
+    pwvucontrol      
+    playerctl        
   ];
 
+  # NVIDIA Driver Settings
+  services.xserver.videoDrivers = [ "nvidia" ];  # Use NVIDIA as the X server video driver
+  hardware.graphics = {
+    enable = true;  
+  };
 
-
-
-
-nvidia driver settings:
-	services.xserver.videoDrivers = ["nvidia"];
-	hardware.graphics = {
-	enable = true;
-	};
-hardware.nvidia = {
-	modesetting.enable = true;
-	powerManagement.enable = false;
-	powerManagement.finegrained = false;
-	open = true;
-	package = config.boot.kernelPackages.nvidiaPackages.beta;
-   };
+  hardware.nvidia = {
+    modesetting.enable = true; 
+    powerManagement.enable = false;  
+    powerManagement.finegrained = false;   
+    open = true;  
+    package = config.boot.kernelPackages.nvidiaPackages.beta;  
+  };
 }
