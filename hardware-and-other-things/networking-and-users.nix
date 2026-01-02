@@ -1,19 +1,18 @@
 { config, lib, pkgs, ... }:
+
 {
-networking.hostName = "nixos"; # Define your hostname.
-home-manager = {
-	backupFileExtension = "hm-backup";
-};
-  # Enable networking
-  networking.networkmanager.enable = true;
-  # Set your time zone.
+  # System Settings
+  
+  # Set the system hostname
+  networking.hostName = "nixos";  # Define your hostname.
+
+  # Set the system time zone
   time.timeZone = "Europe/Bratislava";
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
+  # Select internationalization properties
+  i18n.defaultLocale = "en_US.UTF-8";  # Default locale for the system
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "sk_SK.UTF-8";
+    LC_ADDRESS = "sk_SK.UTF-8"; 
     LC_IDENTIFICATION = "sk_SK.UTF-8";
     LC_MEASUREMENT = "sk_SK.UTF-8";
     LC_MONETARY = "sk_SK.UTF-8";
@@ -21,31 +20,43 @@ home-manager = {
     LC_NUMERIC = "sk_SK.UTF-8";
     LC_PAPER = "sk_SK.UTF-8";
     LC_TELEPHONE = "sk_SK.UTF-8";
-    LC_TIME = "sk_SK.UTF-8";
+    LC_TIME = "sk_SK.UTF-8";  # Set locale for Slovakia
   };
 
-  # Configure keymap in X11
+  # Configure keymap for X11 (US and Russian layouts)
   services.xserver.xkb = {
     layout = "us,ru";
-    variant = "";
+    variant = "";  
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # User Configuration 
+  
+  # Define a user account for "b1u3rchie"
   users.users.b1u3rchie = {
     isNormalUser = true;
-    description = "b1u3rchie";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    description = "b1u3rchie";  
+    extraGroups = [ "networkmanager" "wheel" ];  
+    packages = with pkgs; []; 
   };
+
+  # Default user shell configuration
+  users.defaultUserShell = pkgs.zsh;  
+ 
+  # ZSH Configuration 
+  
   programs.zsh = {
-   enable = true;
-    enableCompletion = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-oh-my-zsh = {
+    enable = true;
+    enableCompletion = true; 
+    autosuggestions.enable = true;  
+    syntaxHighlighting.enable = true; 
+    oh-my-zsh = {
       enable = true;
-      theme = "agnoster"; 
+      theme = "agnoster";  
     };
-};
-users.defaultUserShell = pkgs.zsh;
+  };
+
+  # Networking Settings 
+  
+  # Enable NetworkManager for managing network connections
+  networking.networkmanager.enable = true;
 }
