@@ -17,6 +17,9 @@
  git clone https://github.com/b1u3b3rrys/Nixberry
 ```
 and put files into /etc/nixos
+
+### Todo:
+i want make integration with pywal for fun
 ### Authors
 
 - [b1u3rchie](https://www.github.com/b1u3b3rrys)
