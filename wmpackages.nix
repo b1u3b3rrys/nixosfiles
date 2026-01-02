@@ -8,6 +8,7 @@ xdg.portal = {
 	enable = true;
 	wlr.enable = true;
 };
+programs.nano.enable = false;
   xdg.terminal-exec = {
     enable = true;
     settings = {
