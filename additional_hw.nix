@@ -1,15 +1,17 @@
 { config, ... }:
 {
-#linux kernel
+#linux kernel:
 boot.kernelPackages = pkgs.linuxPackages_latest;
+#bootloader settings:
+boot.loader.systemd-boot.enable = true;
+boot.loader.efi.canTouchEfiVariables = true;
 
 
 
 
 
 
-
-
+nvidia driver settings:
 	services.xserver.videoDrivers = ["nvidia"];
 	hardware.graphics = {
 	enable = true;
