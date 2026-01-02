@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }:
-
+{
 networking.hostName = "nixos"; # Define your hostname.
 home-manager = {
 	backupFileExtension = "hm-backup";
