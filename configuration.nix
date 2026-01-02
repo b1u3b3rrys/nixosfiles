@@ -5,7 +5,7 @@
       ./hardware-configuration.nix
 	./wmpackages.nix
 	./usrpackages.nix
-  ./
+  ./hardware-and-other-things/
 	./misc.nix
 	./pipes.nix
 	./fonts.nix
