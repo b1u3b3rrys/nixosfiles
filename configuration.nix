@@ -19,20 +19,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-	services.xserver.videoDrivers = ["nvidia"];
-	hardware.graphics = {
-	enable = true;
-	};
-#nvidia hardware settings
-hardware.nvidia = {
-	modesetting.enable = true;
-	powerManagement.enable = false;
-	powerManagement.finegrained = false;
-	open = true;
-	package = config.boot.kernelPackages.nvidiaPackages.beta;
-   };
 networking.hostName = "nixos"; # Define your hostname.
 home-manager = {
 	backupFileExtension = "hm-backup";
