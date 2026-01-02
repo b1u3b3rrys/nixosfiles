@@ -4,9 +4,6 @@
   environment.systemPackages = with pkgs; [
     swaybg
     micro
-    git
-    nautilus
-    home-manager
     gnome-themes-extra
     xwayland-satellite
     alacritty
@@ -19,7 +16,6 @@
     waybar
     htop
   ];
-
   # X11 and Wayland Settings 
   # Xwayland enables compatibility for X11 apps on Wayland
   programs.xwayland.enable = true;
