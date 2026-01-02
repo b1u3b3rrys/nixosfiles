@@ -5,7 +5,7 @@
       ./hardware-configuration.nix
 	./wmpackages.nix
 	./usrpackages.nix
-  ./hardware-and-other-things/
+  ./hardware-and-other-things/networking-and-users.nix
   ./hardware-and-other-things/additional-hardware.nix
 	./misc.nix
 	./pipes.nix
