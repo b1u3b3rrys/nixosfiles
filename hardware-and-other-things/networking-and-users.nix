@@ -10,7 +10,7 @@
   time.timeZone = "Europe/Bratislava";
 
   # Select internationalization properties
-  i18n.defaultLocale = "en_US.UTF-8";  # Default locale for the system
+  i18n.defaultLocale = "en_UK.UTF-8";  # Default locale for the system
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "sk_SK.UTF-8"; 
     LC_IDENTIFICATION = "sk_SK.UTF-8";
