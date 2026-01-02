@@ -18,6 +18,8 @@
 ```
 and put files into ~/.config and /etc/nixos
 
+###TO-DO:
+ i want every config in .config move into home-manager, also i should organize all of that
 ### Authors
 
 - [b1u3rchie](https://www.github.com/b1u3b3rrys)
