@@ -16,10 +16,7 @@
 ```
  git clone https://github.com/b1u3b3rrys/Nixberry
 ```
-and put files into ~/.config and /etc/nixos
-
-### TO-DO:
- i want every config in .config move into home-manager, also i should organize all of that
+and put files into /etc/nixos
 ### Authors
 
 - [b1u3rchie](https://www.github.com/b1u3b3rrys)
