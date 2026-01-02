@@ -1,0 +1,75 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+  "source": "~/.config/fastfetch/nix.txt"
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+    {
+    "type": "custom",
+    "format": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+    "color": "#9370DB"
+ },
+	{
+            "type": "title",
+            "keyWidth": 10
+        },
+        {
+    "type": "custom",
+    "format": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+    "color": "#9370DB"
+        },
+        {
+            "type": "os",
+            "key": " ",
+            "keyColor": "33",  // = color3
+        },
+        {
+            "type": "kernel",
+            "key": " ",
+            "keyColor": "33",
+        },
+        {
+            "type": "packages",
+            "format": "{} (nixpkgs)",
+            "key": " ",
+            "keyColor": "33",  
+        },
+        {
+            "type": "shell",
+            "key": " ",
+            "keyColor": "33", 
+        },
+        {
+            "type": "terminal",
+            "key": " ",
+            "keyColor": "33", 
+        },
+        {
+            "type": "wm",
+            "key": " ",
+            "keyColor": "33", 
+        },
+        {
+            "type": "uptime",
+            "key": " ",
+            "keyColor": "33", 
+        },
+        {
+            "type": "media",
+            "key": "󰝚 ",
+            "keyColor": "33", 
+        },
+        {
+    "type": "custom",
+    "format": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+    "color": "#9370DB"
+},
+ {
+    "type": "colors",
+    "symbol": "circle"
+  },
+    ]
+}
