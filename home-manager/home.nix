@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 {
-
+environment.variables = {
+   		EDITOR = "micro";
+   };
 xdg.configFile."niri/75.jpg".source = ./75.jpg;
 xdg.configFile."niri/config.kdl".source = ./config.kdl;
 xdg.configFile."gtk-4.0/settings.ini".force = true;
