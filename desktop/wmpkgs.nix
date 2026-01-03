@@ -32,9 +32,6 @@
     wlr.enable = true; 
   };
 
-  # Cursor Themes (steam with xwayland hate these cursors btw)
-  xdg.icons.fallbackCursorThemes = [ "BreezeX-RosePine-Linux" ];
-
   # Terminal Settings 
   xdg.terminal-exec = {
     enable = true;
