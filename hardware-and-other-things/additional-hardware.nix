@@ -26,15 +26,19 @@
 
   # NVIDIA Driver Settings
   services.xserver.videoDrivers = [ "nvidia" ];  # Use NVIDIA as the X server video driver
-  hardware.graphics = {
-    enable = true;  
+  hardware = {
+			graphics = {
+            enable = true;
+            enable32Bit = true;
+            extraPackages = with pkgs; [
+            ];
+        };
+	 nvidia = {
+	    modesetting.enable = true; 
+	    powerManagement.enable = false;  
+	    powerManagement.finegrained = false;   
+	    open = true;  
+	    package = config.boot.kernelPackages.nvidiaPackages.latest;  
   };
-
-  hardware.nvidia = {
-    modesetting.enable = true; 
-    powerManagement.enable = false;  
-    powerManagement.finegrained = false;   
-    open = true;  
-    package = config.boot.kernelPackages.nvidiaPackages.beta;  
-  };
+};
 }
