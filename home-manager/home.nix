@@ -6,6 +6,15 @@
     ./links.nix
   ];
 
+# Packages
+home.packages = with pkgs; [
+	waybar
+	fuzzel
+	alacritty
+	mako
+	xwayland-satellite
+];
+
   # Environment Variables 
   environment.variables = {
     EDITOR = "micro";  # 
