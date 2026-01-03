@@ -13,6 +13,8 @@ home.packages = with pkgs; [
 	alacritty
 	mako
 	xwayland-satellite
+	swaybg
+  htop
 ];
 
   # Environment Variables 
