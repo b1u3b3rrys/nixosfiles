@@ -12,7 +12,6 @@ home.packages = with pkgs; [
 	fuzzel
 	alacritty
 	mako
-	xwayland-satellite
 	swaybg
   htop
 ];
