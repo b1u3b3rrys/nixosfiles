@@ -12,7 +12,8 @@ home.packages = with pkgs; [
 
   # Environment Variables 
   environment.variables = {
-    EDITOR = "micro";  # 
+    EDITOR = "micro";
+    TERMINAL = "alacritty";
   };
 
   # GTK Configuration 
