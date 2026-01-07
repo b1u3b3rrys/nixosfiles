@@ -22,8 +22,12 @@
   # Desktop Environment and Portal Configuration 
   xdg.portal = {
     enable = true;
-    wlr.enable = true; 
-  };
+    xdgOpenUsePortal = true;
+    wlr.enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-gnome
+    ];
 
   # Terminal Settings 
   xdg.terminal-exec = {
