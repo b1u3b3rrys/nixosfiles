@@ -8,13 +8,7 @@
 
 # Packages
 home.packages = with pkgs; [
-	waybar
-	fuzzel
-	alacritty
-	mako
-	swaybg
-  htop
-];
+	];
 
   # Environment Variables 
   environment.variables = {
