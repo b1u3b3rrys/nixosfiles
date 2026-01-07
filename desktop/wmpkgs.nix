@@ -2,12 +2,17 @@
 {
   # System-wide Settings 
   environment.systemPackages = with pkgs; [
-    micro
-    gnome-themes-extra
-    xwayland-satellite
-    fastfetch
-    hyfetch
-    wl-clipboard
+   micro
+   xwayland-satellite
+   fastfetch
+   hyfetch
+   wl-clipboard
+   waybar
+  	fuzzel
+	  alacritty
+	  mako
+	  swaybg
+   htop
   ];
   # X11 and Wayland Settings 
   # Xwayland enables compatibility for X11 apps on Wayland
